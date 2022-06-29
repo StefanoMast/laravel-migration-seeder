@@ -23,8 +23,8 @@ class TrainsTableSeeder extends Seeder
         for ($i = 0; $i < 20; $i++) {
             $train = new Train();
             $train->company = $companies[rand(0, count($companies) -1)];
-            $train->starting_station= $faker->city();
-            $train->arriving_station= $faker->city();
+            $train->starting_station= $faker->state();
+            $train->arriving_station= $faker->state();
             $train->departure = $faker->time();
             $train->arrival = $faker->time('H_i_s');
             $train->code = rand(00000000000000000001, 99999999999999999999);
